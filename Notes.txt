@@ -1,0 +1,641 @@
+## WiFi - HyperThink
+   Password - hts@2018
+   Wifi - HyperThings IoT
+   Password - Things@18
+   
+   
+1. What is protocol ?
+
+A protocol is a set of rules and guidelines for communicating data. 
+Rules are defined for each step and process during communication between two or more computers. 
+Networks have to follow these rules to successfully transmit data.
+
+2. What is TCP/IP protocol ?
+
+TCP (Transmission Control Protocol) is a standard that defines how to establish and maintain a 
+network conversation via which application programs can exchange data. TCP works with the 
+Internet Protocol (IP), which defines how computers send packets of data to each other. 
+Together, TCP and IP are the basic rules defining the Internet.
+
+3. What is the OSI model ?
+
+The Open System Interconnection (OSI) model defines a networking framework to implement protocols in seven layers. 
+	
+
+## To kill all node process
+	taskkill /im node.exe 
+	or 
+	taskkill /f /im node.exe
+
+*** What is Polyfill :-
+	A polyfill is a browser fallback, made in JavaScript, that allows functionality you expect to work in 
+	modern browsers to work in older browsers, e.g., to support canvas (an HTML5 feature) in older browsers
+
+*** Preset meaning :-
+	Set or adjust (a value that controls the operation of a device) in advance of its use.
+	
+	
+<<<<<<<<<<=======================================================================================>>>>>>>>>>>>>>>>>>>>>>>
+#Path Module
+The Path module provides a way of working with directories and file paths.
+1.basename() - returns the filename part of a file path.
+2.dirname() - returns the directories of a file path.
+3.extname() - Returns the file extension of a path
+4.format() - Formats a path object into a path string
+5.isAbsolute() - Returns true if a path is an absolute path, otherwise false
+6.join() - Joins the specified paths into one. eg; path.join('src', './app.js'); output - src\app.js
+7.normalize() - Normalizes the specified path. eg; path.normalize('src///../app.js'); output - app.js
+8.parse() - Formats a path string into a path object.
+9.resolve() - Resolves the specified paths into an absolute path. eg; path.resolve('./app.js'); output - E:\Code\New folder\socket-io\src\app.js
+10. What is path object - { root: 'E:\\',dir: 'E:\\Code\\New folder\\socket-io\\src.', base: 'app.js', ext: '.js',name: 'app' }
+
+
+#HTTP Module
+The HTTP module allows Node.js to transfer data over the Hyper Text Transfer Protocol (HTTP).
+The HTTP module can create an HTTP server that listens to server ports and gives a response back to the client.
+* To require http into project use -  var http = require('http');
+* res.send is only in express and it is equivalent to res.write() and res.end() of node. It can automatically assign the Content-length 
+HTTP response header field.
+* use res.writeHead(200, { 'Content-Type': 'text/html' }); to include an HTTP header with the correct content type:
+* use - req.url to get the url after domain name.
+
+
+#File System Module
+The Node.js file system module allows you to work with the file system on your computer.
+* To require http into project use -  var fs = require('fs'); 
+Common use for the File System module:
+
+1. Read Files 
+fs.readFile('demofile1.html', function(err, data) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write(data);
+    res.end();
+  });
+  
+2. Create Files
+The File System module has methods for creating new files:
+    1. The fs.appendFile() method appends specified content to a file. If the file does not exist, the file will be created:
+    2. The fs.open() method takes a "flag" as the second argument, if the flag is "w" for "writing", the specified file is 
+		opened for writing. If the file does not exist, an empty file is created:
+    3. The fs.writeFile() method replaces the specified file and content if it exists. If the file does not exist, 
+		a new file, containing the specified content, will be created:
+3. Update files 
+	1. The fs.appendFile() method appends the specified content at the end of the specified file:
+	2. The fs.writeFile() method replaces the specified file and content:
+4. Delete Files
+	The fs.unlink() method deletes the specified file:
+5. Rename Files
+	The fs.rename() method renames the specified file:
+
+#URL Module
+The URL module splits up a web address into readable parts.
+* To require http into project use - var url = require('url'); 
+Parse an address with the url.parse() method, and it will return a URL object with each part of the address as properties:
+
+* What is a URL object ?
+Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host: 'localhost:8080',
+  port: '8080',
+  hostname: 'localhost',
+  hash: null,
+  search: '?year=2017&month=february',
+  query: [Object: null prototype] { year: '2017', month: 'february' },
+  pathname: '/default.htm',
+  path: '/default.htm?year=2017&month=february',
+  href: 'http://localhost:8080/default.htm?year=2017&month=february' }
+
+#NPM 
+* NPM is a package manager for Node.js packages, or modules if you like.
+* The NPM program is installed on your computer when you install Node.js
+
+* What is a Package?
+	A package in Node.js contains all the files you need for a module.
+	Modules are JavaScript libraries you can include in your project.
+#Events
+Node.js is perfect for event-driven applications.
+Every action on a computer is an event. Like when a connection is made or a file is opened.
+Node.js has a built-in module, called "Events", where you can create-, fire-, and listen for- your own events
+In addition, all event properties and methods are an instance of an EventEmitter object. To be able to access 
+these properties and methods, create an EventEmitter object:
+
+var events = require('events');
+var eventEmitter = new events.EventEmitter(); 
+
+
+#Net Module
+The Net module provides a way of creating TCP servers and TCP clients.
+* To require http into project use - var net = require('net');
+* Method 	Description
+1. connect() - Creates a new connection to the server, and returns a new Socket
+2. createConnection() - Creates a new connection to the server, and returns a new Socket
+3. createServer() - Creates a new server
+4. isIP - Checks if the specified value is an IP address
+5. isIPv4 - Checks if the specified value is an IPv4 address
+6. isIPv6 - Checks if the specified value is an IPv6 address
+
+#Util Module
+The Util module provides access to some utility functions.
+The syntax for including the Util module in your application: var util = require('util');
+
+#VM Module
+The VM module provides a way of executing JavaScript on a virtual machine, almost like eval() in JavaScript.
+The syntax for including the VM module in your application: var vm = require('vm');
+
+#Zlib Module
+The Zlib module provides a way of zip and unzip files.
+The syntax for including the VM module in your application: var zlib = require('zlib');
+
+#TLS Module
+The TLS module provides a way of implementing TLS (Transport Layer Security) and SSL (Secure Socket Layer).
+The syntax for including the TLS module in your application: var tls = require('tls');
+
+#Stream Module
+The Stream module provides a way of handling streaming data.
+There are two types of streams: readable and writeable.
+
+An example of a readable stream is the response object you get when working with the http.createServer() method.
+
+An example of a writable stream is the request object you get when working with the http.createServer() method.
+
+#Buffer Module
+The buffers module provides a way of handling streams of binary data.
+The Buffer object is a global object in Node.js, and it is not necessary to import it using the require keyword.
+
+<<<<<<<<<=================================================================================================================>>>>>>>>>
+
+
+*** MongoDB configuration needs to be set after custom installation 
+	We must specify db and log path after installation
+	Go to MongoDB directory and bin
+	mongod --directoryperdb --dbpath "C:\Program Files\MongoDB\Server\4.0\data" --logpath "C:\Program Files\MongoDB\Server\4.0\log\mongo.log" --logappend --install
+*** Mongo DB Dump 
+	** If you are using Windows Power shell the prefix < ./ > before each command
+	mongodump --host <localhost or IP> --port 27019 ( It will create dump directory in same directory )
+	mongodump --host localhost --port 27019 --out "E:/Folder/folder" ( It will push the dump in given directory path)
+	mongodump --host localhost --port 27019 --out "E:/Folder/folder" --db test ( It will only dump the specified databse )
+	mongodump --host localhost --port 27019 --out "E:/Folder/folder" --collection users --db test ( It will only dump users collection from test database)
+	mongodump --host mongodb1.example.net --port 3017 --username user --password "pass" --out /opt/backup/mongodump-2013-10-24 (If username password is requred)
+	
+*** Mongo DB Restore
+	mongorestore --port 27017 <path to the backup> (It will restore the db from the backup path)
+	mongorestore dump-folder/ (It will restore the db from dump-folder to mongodb running at default port 27017)
+	mongorestore --host mongodb1.example.net --port 3017 --username user --password 'pass' "E:/Folder/folder" ( It will restore db to given remote location)
+
+<<<<<<<<<=================================================================================================================>>>>>>>>>
+
+##RESTful Constraints
+	1. Client-Server Architecture
+		Seperation od concerns RESTful API should not care about the UI.
+	2. Stateless
+		No Client-Context (e.g. Session) is stored on the server.
+	3. Chachebility 
+		Responses nust define themselves as cachable or non-cachable.
+	4. Layred system
+		Intermediate servers may be used without the client knowing about it.
+	5. Unifotm Interface
+		Resources are identified in requests, transfered data is decoupled form db schema. Self destructive messages links to further resoureces.
+	6. Executable code on demand
+		Executable code could be transfered.
+##CORS - Cross Origin Resource Sharing
+##Node JS Setup
+1. Install Node JS from (https://nodejs.org/en/). Bette to download version with LTS support.
+2. npm init ( to create intialize npm and create package.json, it will ask few things to enter like version, author etc )
+3. npm init y ( just to avoid the wizard and directly creating package.json)
+4. npm install <package name> --save (In the latest version no need to use --save, package will be automatically saved to as a dependencies 
+5. npm i <package-name>
+6. npm i --save-dev <package-name> ( It will install the package as dev dependencies)
+NPM Libraries 
+1. Frameworks
+	1. Express
+	2. HAPI
+	3. Restify
+	4. Koa
+	5. Sails JS (MVC)
+2. nodemon - to automatically styart server after any changes
+3. morgan - to make a log 
+4. body-parser - to parse the body(it supports json,urlencoded, doennot support files)
+5. cors - CORS helper
+6. MongoDB package
+	1. mongoose
+	2. mongojs
+	3. waterline
+7. Logging Libraries
+	1. Winston
+	2. Bunyan
+	3. Log4js
+	4. Morgan
+8. File Upload Libraries
+	1. Multer
+	2. Formidable
+9. MQTT
+	1. mqtt js
+	2. paho-mqtt
+	3. mqtt-server
+	4. ioBroker MQTT
+10. Modbus	
+	1. jsmodbus
+	2. modbus-tcp
+	3. node-modbus
+11. AngularJS service to handle Rest API
+	1. Restangular
+	2. Satellizer
+12. ORM for MySQL/Postgres etc
+	1. Sequelize
+13. Client-side HTTP request library
+	1. axios
+	2. superagent
+14. Mail 
+	1. nodemailer
+
+
+
+
+
+## NODE-RED 
+1. Install node red using < npm install -g --unsafe-perm node-red > command
+2. Install node red dashboard < npm install node-red-dashboard>
+3. run <node-red> to run the node-red
+
+
+## Hyper V
+Hyper-V is Microsoft's hardware virtualization product. It lets you create and run a 
+software version of a computer, called a virtual machine. Each virtual machine acts like a 
+complete computer, running an operating system and programs. When you need computing resources, 
+virtual machines give you more flexibility, help save time and money, and are a more efficient way 
+to use hardware than just running one operating system on physical hardware.
+
+
+<<<<<<<<<==============================================================================>>>>>>>>>>>>>>
+## IoT Platform
+1. Kaa
+2. ThingsBoard https://thingsboard.io/
+3. DeviceHive https://devicehive.com/
+4. https://iotivity.org/
+5. https://www.particle.io/
+6. http://www.iot-dsa.org/
+7. Sitewhere - https://sitewhere.io/en/
+8. ARM - https://www.arm.com/
+9. Cumulocity - https://www.softwareag.cloud/site/product/cumulocity-iot.html#/
+10. Thinger - https://thinger.io/
+11. Bolt IoT - https://www.boltiot.com/
+12. Webnms - https://www.webnms.com/
+13. Firendly IoT - https://www.friendly-tech.com/
+14. Hologram IoT - https://hologram.io/
+15. IBM - https://www.ibm.com/internet-of-things
+16. Azure - https://azure.microsoft.com/en-in/services/iot-hub/
+17. At & T - https://iotplatform.att.com/
+18. Predix - https://www.predix.io/
+19. ThingsSpeak - https://thingspeak.com/
+20. Zetta - https://www.zettajs.org/
+21. DevicePiolt - https://www.devicepilot.com/
+22. Thethings.iO - https://thethings.io/
+23. https://ubidots.com/
+24. https://temboo.com/
+25. https://artik.cloud/
+26. https://xively.com/
+27. https://mydevices.com/
+
+<<<<<<<<<==============================================================================>>>>>>>>>>>>>>>
+
+## Tool To Explore
+1. Kubernetes( https://kubernetes.io/ ) - Kubernetes (K8s) is an open-source system for automating deployment, scaling,
+   and management of containerized applications.
+2. Docker
+3. Chocolatey( https://chocolatey.org/ ) - The package manager for Windows
+4. https://dweet.io/
+5. https://freeboard.io/
+7. Grafana
+8. Library.io
+9. Node-RED 
+10. CMD Tools - Babun/Cygwin/Chocolatey/
+
+<<<<<<<<<==============================================================================>>>>>>>>>>>>>>>>>
+
+## Naming Convenstions
+	File Name - lowercase and seprated with dashes
+	Variable - camelCase
+	
+## Few Node Commands
+	1. node --version - to check node version
+	2. npm --version - to check npm verison
+	3. npm i -D - to install library with dev dependencies
+	4. npm i -D @babel/core  babel-loader @babel/preset-env
+
+
+
+<<<<<<<<<==============================================================================>>>>>>>>>>>>>>>>>
+##Docker Commands
+
+1. Check Docker veriosn
+	docker --version
+2. To run a image
+	docker run <image-name> eg; docker run hello-world
+3. To check all the images, which is in the system
+	docker images
+4. To pull a image from docker hub
+	docker pull <image-name> eg; docker pull ubuntu
+5. To run a image
+	docker run -it -d <image-name> eg; docker run -it -d ubuntu
+6. To show all the containers
+	docker ps -a
+7. To access a running container
+	docker exec -it <containerId> bash. eg; docker exec -it 72d89f31ef49 bash
+8. To come out of container
+	exit
+9. To stop a container
+	docker stop <containerId> eg; docker stop 72d89f31ef49
+10.  To login
+	docker login
+11. To commit i.e. To create a image in local system
+	docker commit <containerId> <docker-hub-repository>
+12. To push the image to docker hub
+	docker push nikhil/ubuntu
+13. To delete a container
+	docker rm <containerId> eg; docker rm 72d89f31ef49
+14. To delete docker images
+	docker rmi <imageId> eg; docker rmi 4c108a37151f
+15. To create a DokerFlle where all the dependencies live
+	touch DockerFile
+16. To build the image 
+	docker build -t <folder-name> . eg; docker build -t docker-node .
+17. To run the docker container
+	docker run -p 	8082:3001 <folder-name> eg; docker run -p 8082:3001 docker-node
+	
+	
+	
+# Encryption/Cryptography :-
+ 
+* Encryption Algorithms - 1. Symmetric or Secret key Encryption 2. Asymmetric or Public key encryption
+* Cipher - Non readable
+
+* Cryptography - 1. Symmetric Key Cryptography 	2. Asymmetric Key Cryptography
+* Symmetric Key Cryptography - 1. Classical Cryptography 	2. Modern Cryptography
+* Classical Cryptography - 1. Transposition Cipher 2.Substiution Cipher
+* Modern Cryptography - 1. Stream Cipher 2. Block Cipher
+
+* AES - Advanced Encryption Standards
+* DES - Data Encryption Standards
+
+<<<<<<<<<=================================================================================================================>>>>>>>>>
+#OPEN SSL
+* Create private key - openssl genrsa -out mykey.pem 1024 		then 		cat mykey.pem
+* Create Certificate using the above private key - openssl req -new  -key mykey.pem -out mykey-csr.pem
+* Generate self signed certificate - openssl x509 -req -in mykey-csr.pem -signkey mykey.pem -out my-cert.pem
+* Connecting using openssl - openssl s_client -connect localhost:8000
+**Steps to create the server certificate
+1. To create new certificate authority
+
+
+
+2. To create private key for server
+	openssl genrsa -out server-key.pem 4096
+
+3. To generate the certificate signing request
+	openssl req -new -key server-key.pem -out server-csr.pem
+
+4. To sign the request
+	openssl x509 -req -days 9999 -in server-csr.pem -CA ca-crt.pem -CAkey ca-key.pem -CAcreateserial -out server-crt.pem
+
+** Steps to create client certificate
+1. To create client key
+ openssl genrsa -out client1-key.pem 4096
+ 
+2. To create a pair of certificate signing requests.
+	openssl req -new -key client1-key.pem -out client1-csr.pem
+
+3. To sign our two new client certs
+	openssl x509 -req -days 999 -in client1-csr.pem -CA ca-crt.pem -CAkey ca-key.pem -CAcreateserial -out client1-crt.pem
+
+** TO verify evrything worked perfectly
+	openssl verify -CAfile ca-crt.pem client1-crt.pem
+
+** To run mosquitto broker and load the configuration files
+	1. Go to mosquitto installation folder
+	2. mosquitto -v -c mosquitto.conf
+
+<<<<<<<<<=================================================================================================================>>>>>>>>>
+
+#Socket Programming
+* Why - To build any networked application.
+* Bidirectional data flow i.e. from client to server and server to client. Allows real time data flow 
+* It is a wrapper around websockets.
+
+
+
+# Websockets
+* Bi directional communication.
+* In websockets connection doesnt get closed untill the client or server terminate the connection.
+* Chat application
+
+
+
+
+<<<<<<<<<===============================================================================================================>>>>>>>>>>>>>>>>>>
+
+
+#Modbus
+Modbus is a serial communication protocol. Modbus can be used over ethernet as well as a serial cable.
+Modbus protocol is defined as a master/slave protocol, meaning a device operating as a master will poll 
+one or more devices operating as a slave. This means a slave device cannot volunteer information; 
+it must wait to be asked for it. The master will write data to a slave device’s registers, and read 
+data from a slave device’s registers. A register address or register reference is always in the context of 
+the slave’s registers.
+Each exchange of data consists of a request from the master, followed by a response from the slave.
+In the TCP context, the slave becomes the server and the master becomes the client. 
+The types of registers referenced in Modbus devices include the following:
+• Coil (Discrete Output) - Coils are 1-bit registers, are used to control discrete outputs, and may be read or written.
+• Discrete Input (or Status Input) - Discrete Inputs are 1-bit registers used as inputs, and may only be read.
+• Input Register - Input registers are 16-bit registers used for input, and may only be read.
+• Holding Register - Holding registers are the most universal 16-bit register, may be read or written, and may be 
+used for a variety of things including inputs, outputs, configuration data, or any requirement for "holding" data.
+
+#Modbus Function Codes Recognized by CSI Gateways
+Function Code 	Register Type
+1 				Read Coil
+2 				Read Discrete Input
+3 				Read Holding Registers
+4 				Read Input Registers
+5 				Write Single Coil
+6 				Write Single Holding Register
+15 				Write Multiple Coils
+16 				Write Multiple Holding Registers
+
+#MQTT
+	It is a simple light wieght publish and subscribe system, where we can recive and publish messages as a client.
+	You can send a command to control an output
+# Register
+A processor register (CPU register) is one of a small set of data holding places that are part of the computer processor.
+
+
+<<<<<<<<<==================================================================>>>>>>>>>>>>
+
+# Certificate file formats
+* What is DER file ?
+	Distinguished file format. Binary format. Non human readable.Perfect for an X.509 certificate
+
+* What is PEM file ?
+	A file with the PEM file extension is a Privacy Enhanced Mail Certificate file used to privately transmit email.
+	Generally the format provided by CAs.
+	The PEM format has been replaced by newer and more secure technologies but the PEM container is still 
+	used today to hold certificate authority files, public and private keys, root certificates, etc.
+
+*Whhat is PKCS #12 file ?
+	Public key Cryptography Standards #12. This is personal information exchange syntax standards. It is used to put together a pulic key and 
+	private key and send them to someone else. In windows similar format is (.pfx).
+
+
+*What is CER file ?
+	This is a certificate file.This is usually holding the X.509 standard certificate.
+	Can be encoded as binary DER file format or the ASCII PEM format. It contains the public key. Common format for windows certificate. 
+	(.cer) extension.
+
+
+* What os CRT file ?
+	CRT is a file extension for a digital certificate file used with a web browser. CRT files are used to verify a secure website's authenticity, 
+	distributed by certificate authority (CA) companies such as GlobalSign, VeriSign and Thawte.
+
+
+*PKCS #7
+
+#Types of Certificate
+Certificate, in a nutshell, is a file that binds the owner identity with his public key. this bond is 
+signed and confirmed by a reliable third party which called the Certificate Authority (CA). 
+You can think of the certificate authority as a trusted organization whose customers are 
+web-services owners that need to issue a certificate. 
+
+* Root certificate 
+	The public key certificate that identifies the root CA(Certificate Authority). Everything starts with this certificate.
+	This certificate will issue other certificate.
+	Access to the root certificate allows for the creation of any trsuted certificate. If someone gets the private key associated with this
+	CA then they can access their own certificates.
+
+* Web server SSL certificate.
+* Domain validation certificate(DV).
+	Owner of this certificate has some control over a DNS domain.
+* Extended validation certificate (EV).
+	Green name of the owner on the address bar. Additional checks have verified the certificate owners identity.
+
+* Subject alternative name (SAN)
+	Extension to X.509 certificate. Many domains can have exactly the same certificate.	
+
+* Self signed certificate
+	Internal certificates dont need to be signed by a public CA.
+	Your company is the only one going to use it.
+	No need to purchase trust for devices that already trust you.
+	Bulid your own CA
+	Issue your own certificates signed by your own CA.
+	Install the CA certificate/trusted chain on all devices
+
+
+* User certificate
+
+* Email Certificate
+	Use Cryptography in an email platform
+	Encrypting email.
+	Digital signatures
+
+* Code siging certificate
+* CSR extension file - Certificate signing request
+	A CSR file is a file created as a signing request for a digital certificate. 
+	It contains an encrypted block of text that identifies the applicant of the certificate and 
+	includes encrypted data for country, state, organization, 
+	domain, email address, and public key. The file is used by a Certificate Authority to establish proof of identity for Web sites.
+
+* PKI - Public key infrastructure
+* X.509 
+	An X.509 certificate is a digital certificate that uses the widely accepted international 
+	X.509 public key infrastructure (PKI) standard to verify that a public key belongs to the user,
+	computer or service identity contained within the certificate.
+	
+	
+	
+<<<<<<<<<<<<<<<<====================================================>>>>>>>>>>>>>>>>>>>>>
+
+#OpenSSL Commands
+Generate a certificate authority certificate and key
+openssl req -new -x509 -days duration -keyout mqtt_ca.key -out mqtt_ca.crt
+
+Generate a server key
+openssl genrsa -des3 -out mqtt_server.key size_of_private_key_in_bits
+
+Generate a certificate signing request to send to the CA
+openssl req -out mqtt_server.csr -key mqtt_server.key -new
+
+Send the CSR to the CA, or sign it with your CA key
+openssl x509 -req -in mqtt_server.csr -CA mqtt_ca.crt -CAkey mqtt_ca.key -CAcreateserial -out mqtt_server.crt -days duration
+
+Generate a client key
+openssl genrsa -des3 -out mqtt_client.key size_of_private_key_in_bits
+
+Generate a certificate signing request to send to the CA
+openssl req -out mqtt_client.csr -key mqtt_client.key -new
+
+Send the CSR to the CA, or sign it with your CA key
+openssl x509 -req -in mqtt_server.csr -CA mqtt_ca.crt -CAkey mqtt_ca.key -CAcreateserial -out mqtt_server.crt -days duration
+
+Configure mosquitto file
+
+port 8883
+cafile your_path/mqtt_ca.crt
+certfile your_path/mqtt_server.crt
+keyfile your_path/mqtt_server.key
+require_certificate true  //set it if you want to verify client's certificate
+tls_version tlsv1.1
+
+<<<<<<<<<<<<<<<<<<<<<<===============================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+* Statelessness -
+As per the REST (REpresentational “State” Transfer) architecture, the server does 
+not store any state about the client session on the server side. This restriction 
+is called Statelessness. Each request from the client to server must contain all 
+of the information necessary to understand the request, and cannot take advantage 
+of any stored context on the server. Session state is therefore kept entirely on the client. 
+client is responsible for storing and handling all application state related information on client side.
+
+Statelessness means that every HTTP request happens in complete isolation. 
+When the client makes an HTTP request, it includes all information necessary for 
+the server to fulfill that request. The server never relies on information from previous requests. 
+If that information was important, the client would have sent it again in this request.
+
+* What is Multi tenant Architecture ?
+Multi-tenant architecture, commonly referred to as multitenancy, is a software architecture in 
+which multiple single instances of software run on a single physical server. 
+The server then serves multiple tenants.
+
+* Service-oriented architecture ?
+Service-oriented architecture is a style of software design where services are 
+provided to the other components by application components, through a communication protocol over a network.
+
+*SaaS
+Software as a service is a software licensing and delivery model in which software is licensed on a 
+subscription basis and is centrally hosted. It is sometimes referred to as "on-demand software",.
+
+* IaaS
+Infrastructure as a service (IaaS) is a form of cloud computing that provides virtualized computing resources over the internet.
+
+*PaaS
+Platform as a service (PaaS) is a cloud computing model in which a third-party provider delivers hardware 
+and software tools -- usually those needed for application development -- to users over the internet. 
+A PaaS provider hosts the hardware and software on its own infrastructure.
+
+
+* The various approached to multi tenancy 
+	1. Shared database with shared schema
+		A single database keeps every tenant’s data. A ForeignKey in the tables identifies the tenant.
+		
+	2. Shared database with isolated schema
+		A single database keeps every tenant’s data. Each tenant’s data is in a separate schema within the single database. 
+		The schema identifies the tenant and data tabled do no have a FK to the tenant.
+		
+	3. Isolated database with a shared app server
+		Every tenant’s data is in a separate database. The database identifies the tenant.
+	
+	4. Completely isolated tenants using Docker
+	
+* Mult-tenancy is regarding to the data ownership. The data is segmented by tenans (owners). 
+The application use to be the same for a simple reason: economy of scale. The data storage 
+could be also the same or it could be different for each tenan. 
+The data is not shared-accesible among tenants (or usually they are not, so far I know)
+

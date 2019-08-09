@@ -1,0 +1,68 @@
+1. git init
+2. git config --global user.name 'Nikhil'
+3. git config --global user.email 'emailnkv@gmail.com'
+4. git add index.html or git add *.html or git add . 
+5. git status
+6. git rm --cached index.html
+7. git commit -m 'Changed Index'
+8. touch .gitignore ( and add filename which should not be committed)
+9. git branch mybranch ( to create new branch )
+9.1  git push --set-upstream origin <nikhil-branch> ( to push files to newly created bracnh )
+10. git checkout mybranch ( to swtich to new branch)
+11. git remote ( to see all the added remote repositiries)
+12. git push -u origin master
+13. git push
+14. git remote rm origin (to remove a origin)
+15. git remote add origin new_url (to add new remote url)
+16. git reset ( to remove all files from staging )
+17. git config --global --unset user.name
+18. git config --global --unset user.email
+19. git config --global --unset credential.helper
+20. To logout one user and login new user 
+	For Windows User:
+	Follow Instructions:
+	Control Panel >> User Account >> Credential Manager >> Windows Credential >> Generic Credential
+
+	remove git credential.
+	next time when you'll push repo it'll ask you for credential.
+21. git remote show origin (to see orogine details )
+22. git branch -r or git ls-remote ( to show all remote branches )
+23. git branch  ( list all branches)
+24. git branch -a ( list all local and remote branches separately )
+25. git branch -d <branch name> ( delte a local branch )
+26. git push origin --delete <branch name> ( deletes a rmote branch )
+27. git checkout -b <branch-name> ( creates new branch and swtich to it)
+28. git clone https://github.com/nikhil-hyperthings/Fleet-Tracking-API.git <folder-name> ( to clone into some folder )
+29. git clone --single-branch --branch <branch-name> https://github.com/nikhil-hyperthings/Fleet-Tracking-API.git <folder-name>
+30. git checkout -b <new-branch> origin/<branch-name>
+
+
+
+##If you want to push the updated code again.
+
+
+1)git init
+
+2)git remote add origin https://github.com/hyperthink-systems/data-update.git
+
+3)git remote -v (for checking current repository)
+
+4)git add -A(add all files)
+
+5)git commit -m 'Added my project'
+
+6)git pull --rebase origin master
+
+7)git push origin master
+
+##Here's the simple way :
+
+    git add .
+    git commit -m "Final Changes"
+    git remote add origin url(in url add the address of your repository)
+    git remote -v
+    git push -f
+    git push origin master
+	git push origin HEAD:master
+	git rebase --abort
+	git pull origin master --rebase

@@ -1,0 +1,93 @@
+A response's status is specified by its status code: 1xx for information, 2xx for success, 3xx for redirection, 4xx for client errors and 5xx for server errors.
+
+1. 200
+(Ok) Response to a successful GET, PUT, PATCH or DELETE. Can also be used for a POST that doesn't result in a creation.
+
+
+2. 201
+(Created ) Response to a POST that results in a creation. 
+Should be combined with a Location header pointing to the location of the new resource
+
+
+3. 304
+( Not Modified) There was no new data to return.
+
+4. 400
+The API request you sent failed the validation requirements. You should look into the response body for more details about the error(s).
+400 is the generic client-side error status, used when no other 4xx error code is appropriate. Errors can be like malformed request syntax, 
+invalid request message parameters, or deceptive request routing etc.
+
+
+5. 401	
+(Unauthorized) must be used when there is a problem with the client’s credentials.
+A 401 error response indicates that the client tried to operate on a protected resource without providing the proper authorization. 
+It may have provided the wrong credentials or none at all. 
+
+6. 403	
+(Forbidden) should be used to forbid access regardless of authorization state.
+If the client attempts a resource interaction that is outside of its permitted scope, the REST API should respond with 403. 
+
+
+7. 404
+(Not Found) must be used when a client’s URI cannot be mapped to a resource.
+The user is not found.
+
+
+8. 409
+( Conflict )The request could not be completed due to a conflict with the current state of the target resource. 
+
+
+9. 410 
+(Gone) Indicates that the resource at this end point is no longer available. 
+Useful as a blanket response for old API versions
+
+
+10. 500
+500 is the generic REST API error response. Most web frameworks automatically respond with this response 
+status code whenever they execute some request handler code that raises an exception.
+
+
+11. 204
+(No Content) Response to a successful request that won't be returning a body (like a DELETE request)
+An API may also send 204 in conjunction with a GET request to indicate that the requested resource exists, 
+but has no state representation to include in the body.
+
+
+12. 422 (Unprocessable Entity)
+Used for validation errors
+
+
+## How many status codes should you use for your API?
+
+When you boil it down, there are really only 3 outcomes in the interaction between an app and an API:
+
+    Everything worked
+    The application did something wrong
+    The API did something wrong
+
+Start by using the following 3 codes. If you need more, add them. But you shouldn't go beyond 8.
+
+    200 - OK
+    404 - Not Found
+    500 - Internal Server Error
+
+If you're not comfortable reducing all your error conditions to these 3, try picking among these additional 5:
+
+    201 - Created
+    304 - Not Modified
+    400 - Bad Request
+    401 - Unauthorized
+    403 - Forbidden
+
+
+##
+GET: 200 OK
+POST: 201 Created
+PUT: 200 OK
+PATCH: 200 OK
+DELETE: 204 No Content
+
+##
+Has the user not provided authentication credentials? Were they invalid? 401 Unauthorized.
+Was the user correctly authenticated, but they don’t have the required permissions to access the resource? 403 Forbidden.
+

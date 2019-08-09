@@ -1,0 +1,22 @@
+1. Login to https://demo.thingsboard.io/login for live demo
+2. First step is to create a asset under Assets tab, Asset name Building A and Type Building 
+3. Then add few devices under Devices tab, Device name Thermometer A-1, and Thermometer A-2 and type Thermometer.
+4. Now Define relation between asset and device
+	1. Click on Assets>Building A>Relations (In left side)>Then click on + icon> Relation type "Contains", To entity "Device", Device Name "Thermometer A-1"
+5. Pushing data from a device to ThingsBoard
+	We will use HTTP protocol to push the data, however other protocols like MQTT are also supported
+	* Detailed documentation can be found here
+	https://thingsboard.io/docs/getting-started-guides/helloworld/
+	* $HOST_NAME in case of live demo server:
+		curl -v -X POST -d "{\"temperature\": 25}" https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+	* $HOST_NAME in case of local installation:
+		curl -v -X POST -d "{\"temperature\": 25}" http://localhost:8080/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+	* $ACCESS_TOKEN 
+		This can found under Devices>Thermometer A-1>Details>Copy Access Token
+	For eg
+	curl -v -X POST -d "{\"temperature\": 25}" https://demo.thingsboard.io/api/v1/7voW4HzH4OpcGiHWZVCv/telemetry --header "Content-Type:application/json"
+6. Configuring Rule engine
+	1. Go to Rule Chains tab
+		Click on + icon and "Create new rule" enter  name for eg "Temprature emulation"
+		
+7. Creating dashboard to viisualize the data

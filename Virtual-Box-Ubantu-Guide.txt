@@ -1,0 +1,24 @@
+1. Download "Virtual Box" from offical website ( https://www.virtualbox.org/ ), Select windows host.
+2. Download "Ubantu OS" from offical website ( https://www.ubuntu.com/ ), Select desktop and then download the latest LTS version ISO file.
+3. Install "Virtual Box" by clicking next next. Install using all the default setting.
+4. After installing the "Virtual Box", open it and click on "New". 
+5. Enter name of your choice for the OS. eg : Nik-Ubantu. then select the "type" ie: Linux and Select "version" ie: Ubantu and the proccessor type of your "Host Machine" eg: 64 or 32.
+6. Next you need to selct the "Memory Size or RAM" you want to allocate for your Guest system. It is a good idea to never allocate more than half of the memory, that you have in your "Host Machine".
+	So if RAM in your PC is 8 GB, allocate 2GB for your Guest machine. to reduce the risk of crashing of your host system.
+7. Next you need to select "Hard Disk", select "Create a virtual hard disk now".
+8. Next you will be asked to choose the file you wnat to use for your new virtaul hard disk. Select "VDI ( VirtualBox Disk Image)".
+9. Now you will be asked to choose Storage on Physical hard disk, select "Dynamically allocateed". SO your Guest system will not use your Host hard disk untill it needs it.
+10. Now   you will be asked to choose to slect "File location and Size". keep it 10GB.
+11. So it is done now.
+12. Go to setting tab in "General" you will get to see the information you entered earlier.
+13. Click on "System" tab. You will see the memory you previouslyt allocated. Select the "Proccessor" tab. You may want to change to proccessor slider. Never go above the half of your CPU count. Keep it 2 it should be fine.
+14. In "Display" its best to give "Video memory" as much you can. Go all the way to right. also enable "3D and 2D video acceleration". It will give you smoother experince.
+15. Now will Jump to "Storage", this is where we will add our "ISO Ubantu File". Click on "Controller IDE > Empty" and click on "IDE Secondr Master Disk Icon" to choose the file you downloaded earlier.
+16. You should not have to mess with other setting options.
+17. Ignore the warning message "Invalid settings detected".
+18. You have the option to select a folder which can be shared between host and guest OS. Go to "Shared folder" tab, click on "+ icon in left side ", select the dropdown arraow in "Folder path" and slect "Other " and then move to yoyur Host operating sytem flder and select one folder.
+19. Everything is done click on "Start".
+20. Now you will have two options "Try Ubantu or Install Ubantu", select "Install Ubantu".
+21. Select "Normal Installation" and "Download Updates and Install third party software for graphics, wifi etc.. slect both the options".
+22. Next select "Erase disk and Install Ubantu" and Click on "Install Now".
+### If you are not able to add "ISO File" to storage. Then Restart your system and go to BIOS and enable "Intel Virtualization".

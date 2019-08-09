@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "FirstJavaApp",
+  "namespace": "org.kaaproject.kaa.schema.sample",
+  "fields": [
+    {
+      "name": "temperature",
+      "type": "int"
+    },
+    {
+      "name": "nikData",
+      "type": "int"
+    }
+  ]
+}
